@@ -11,6 +11,7 @@ if (!isset($_SESSION["email"]) || !isset($_SESSION["senha"])) {
 }
 
 $logado = $_SESSION['nome'];
+$logadoEmail = $_SESSION['email'];
 
 
 if (!empty($_GET['search'])) {
@@ -314,7 +315,7 @@ mysqli_close($conexao);
     });
     function registrarSaida(id) {
     // Definindo a URL de onde o PHP processa a requisição para registrar a saída
-    const email = "<?php echo htmlspecialchars($logado); ?>"; // O email do usuário logado
+    const email = "<?php echo htmlspecialchars($logadoEmail); ?>"; // O email do usuário logado
     const horario = new Date().toISOString().slice(0, 19).replace('T', ' '); // Obtendo o horário atual
 
     // Enviar os dados via AJAX

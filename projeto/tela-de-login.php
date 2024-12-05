@@ -104,7 +104,6 @@
             <input class="inputSubmit" type="submit" name="submit" value="Login">
         </form>
     <?php
-    session_start();
     // Exibe a mensagem de erro, se houver
     if (isset($_SESSION['error_message'])) {
         echo "<div class='error-message'>" . $_SESSION['error_message'] . "</div>";

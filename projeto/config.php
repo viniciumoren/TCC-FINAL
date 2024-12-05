@@ -1,7 +1,7 @@
 <?php
-    $dbHost = 'localhost';
-    $dbUsername = 'root';
-    $dbPassword = '';
+    $dbHost = 'db';
+    $dbUsername = 'user';
+    $dbPassword = 'user';
     $dbName = 'formulario_gustavo';
 
     // Criar a conexão

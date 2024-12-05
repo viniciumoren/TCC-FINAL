@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: censopcd
+      MYSQL_DATABASE: formulario_gustavo
       MYSQL_USER: user
       MYSQL_PASSWORD: user
     volumes:

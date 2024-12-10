@@ -92,7 +92,7 @@
     </style>
 </head>
 <body>
-    <a href="home.php" class="btn-voltar">Voltar</a>
+    <a href="index.php" class="btn-voltar">Voltar</a>
     <div>
         <h1>Login</h1>
 

@@ -193,6 +193,7 @@ mysqli_close($conexao);
     <div class="menu-container-registra" ">
             <div class=" menu">
         <a href="registraEncomenda.php">Registrar</a>
+        <a href="chatbotEnc.php"><i class="fa fa-whatsapp" style="font-size:36px"></i>
 </a>
     </div>
     </div>

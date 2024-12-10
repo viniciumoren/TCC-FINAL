@@ -195,17 +195,17 @@ if ($result && mysqli_num_rows($result) > 0) {
 
     // Adicionando eventos para mostrar e esconder vídeos
     document.getElementById('titulo').addEventListener('mouseover', () => {
-        showVideo('video/controle-acesso.mp4'); // Vídeo para "Controle de Acesso"
+        showVideo('video/apartamento.mp4'); // Vídeo para "Controle de Acesso"
     });
     document.getElementById('titulo').addEventListener('mouseout', hideVideo);
 
     document.getElementById('label-morador').addEventListener('mouseover', () => {
-        showVideo('video/selecione-morador.mp4'); // Vídeo para "Selecione o Morador"
+        showVideo('video/apartamento.mp4'); // Vídeo para "Selecione o Morador"
     });
     document.getElementById('label-morador').addEventListener('mouseout', hideVideo);
 
     document.getElementById('btn-entrada').addEventListener('mouseover', () => {
-        showVideo('video/solicitar-entrada.mp4'); // Vídeo para "Solicitar Entrada"
+        showVideo('video/apartamento.mp4'); // Vídeo para "Solicitar Entrada"
     });
     document.getElementById('btn-entrada').addEventListener('mouseout', hideVideo);
 

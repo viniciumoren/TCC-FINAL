@@ -135,17 +135,20 @@ if ($result && mysqli_num_rows($result) > 0) {
             transform: scale(1);
             /* Retira o efeito de zoom */
         }
-        #video-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            z-index: 9999;
-        }
+        video {
+    position: fixed;
+    margin-left: 1100px;
+    margin-top: 250px;
+    bottom: 20px;
+    right: 20px;
+    width: 150px; /* Ajuste o valor conforme necessário */
+    height: 255px; /* Ajuste o valor conforme necessário */
+    border: 5px solid dodgerblue;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #000;
+}
 
-        #video-libras {
-            width: 300px;
-        }
     </style>
 
    

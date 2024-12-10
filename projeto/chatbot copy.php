@@ -1,3 +1,20 @@
+<?php
+session_start(); // Iniciar sessão para acessar as variáveis de sessão
+include_once('config.php'); // Conexão ao banco de dados
+
+// Consultar a tabela de moradores
+$query = "SELECT id, nome, telefone FROM moradores";
+$result = mysqli_query($conexao, $query);
+
+// Verificar se há resultados
+$moradores = [];
+if ($result && mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $moradores[] = $row;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,8 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Controle de Acesso</title>
     <style>
-        /* Seu estilo permanece o mesmo */
-        * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -87,26 +103,16 @@
             margin-top: 1rem;
             color: #666;
         }
-
-        #video-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            z-index: 9999;
-        }
-
-        #video-libras {
-            width: 300px;
-        }
     </style>
+
+   
 </head>
 <body>
 <div class="container">
-    <h1 id="titulo">Controle de Acesso</h1> <!-- ID adicionado -->
+    <h1>Controle de Acesso</h1>
 
     <div class="input-group">
-        <label id="label-morador" for="morador">Selecione o Morador:</label> <!-- ID adicionado -->
+        <label for="morador">Selecione o Morador:</label>
         <select id="morador" name="morador">
             <option value="" disabled selected>Selecione um morador</option>
             <?php foreach ($moradores as $morador): ?>
@@ -115,50 +121,12 @@
         </select>
     </div>
 
-    <button id="btn-entrada" class="wa-button" onclick="sendMessage()">Solicitar Entrada</button> <!-- ID adicionado -->
+    <button class="wa-button" onclick="sendMessage()">Solicitar Entrada</button>
 
     <div class="status" id="status"></div>
 </div>
 
-<div id="video-container">
-    <video id="video-libras" controls>
-        <source id="video-source" src="" type="video/mp4">
-    </video>
-</div>
-
 <script>
-    const videoContainer = document.getElementById('video-container');
-    const videoSource = document.getElementById('video-source');
-    const videoElement = document.getElementById('video-libras');
-
-    function showVideo(src) {
-        videoSource.src = src;
-        videoContainer.style.display = 'block';
-        videoElement.load();
-        videoElement.play();
-    }
-
-    function hideVideo() {
-        videoContainer.style.display = 'none';
-        videoSource.src = '';
-    }
-
-    // Adicionando eventos para mostrar e esconder vídeos
-    document.getElementById('titulo').addEventListener('mouseover', () => {
-        showVideo('video/controle-acesso.mp4'); // Vídeo para "Controle de Acesso"
-    });
-    document.getElementById('titulo').addEventListener('mouseout', hideVideo);
-
-    document.getElementById('label-morador').addEventListener('mouseover', () => {
-        showVideo('video/selecione-morador.mp4'); // Vídeo para "Selecione o Morador"
-    });
-    document.getElementById('label-morador').addEventListener('mouseout', hideVideo);
-
-    document.getElementById('btn-entrada').addEventListener('mouseover', () => {
-        showVideo('video/solicitar-entrada.mp4'); // Vídeo para "Solicitar Entrada"
-    });
-    document.getElementById('btn-entrada').addEventListener('mouseout', hideVideo);
-
     function sendMessage() {
         const moradorSelect = document.getElementById('morador');
         const telefone = moradorSelect.value;

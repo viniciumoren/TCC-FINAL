@@ -177,7 +177,7 @@ if (isset($_POST['submit'])) {
 </style>
 
 <body>
-    <a href="home.php" class="btn-voltar">Voltar</a>
+    <a href="index.php" class="btn-voltar">Voltar</a>
     <div class="box">
         <form action="formulario.php" method='POST'>
             <fieldset>
@@ -197,7 +197,7 @@ if (isset($_POST['submit'])) {
 
                 <div class="inputBox">
                     <input type="text" name="email" id="email" class="inputUser" required>
-                    <label for="email" class="labelInput">email</label>
+                    <label for="email" class="labelInput">Email</label>
                 </div>
 
                 <br> <br>

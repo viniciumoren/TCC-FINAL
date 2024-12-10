@@ -303,7 +303,7 @@ mysqli_close($conexao);
     document.querySelector("th:nth-child(3)").addEventListener('mouseover', () => showVideo('video/nome.mp4'));   // Nome
     document.querySelector("th:nth-child(4)").addEventListener('mouseover', () => showVideo('video/apartamento.mp4')); // Apartamento
     document.querySelector("th:nth-child(5)").addEventListener('mouseover', () => showVideo('video/data.mp4')); // Data
-    document.querySelector("th:nth-child(6)").addEventListener('mouseover', () => showVideo('video/quem_recebeu.mp4')); // Data
+    document.querySelector("th:nth-child(6)").addEventListener('mouseover', () => showVideo('video/quem_recebeu_encomenda.mp4')); // Data
     document.querySelector("th:nth-child(7)").addEventListener('mouseover', () => showVideo('video/quem_entregou.mp4')); // Data
     document.querySelector("th:nth-child(8)").addEventListener('mouseover', () => showVideo('video/horario_entrega.mp4')); // Data
 

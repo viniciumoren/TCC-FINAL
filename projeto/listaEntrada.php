@@ -304,7 +304,7 @@ mysqli_close($conexao);
     document.querySelector("th:nth-child(8)").addEventListener('mouseover', () => showVideo('video/data.mp4'));    // Data
     document.querySelector("th:nth-child(9)").addEventListener('mouseover', () => showVideo('video/quem_registrou_entrada.mp4'));    // Data
     document.querySelector("th:nth-child(10)").addEventListener('mouseover', () => showVideo('video/quem_registrou_saida.mp4'));    // Data
-    document.querySelector("th:nth-child(11)").addEventListener('mouseover', () => showVideo('video/horario_da_saida.mp4'));    // Data
+    document.querySelector("th:nth-child(11)").addEventListener('mouseover', () => showVideo('video/horario_saida.mp4'));    // Data
 
     // Para a barra de pesquisa
     document.getElementById('pesquisar').addEventListener('mouseover', () => showVideo('video/pesquisar.mp4'));

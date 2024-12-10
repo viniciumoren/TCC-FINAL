@@ -140,6 +140,7 @@ mysqli_close($conexao);
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-lg shadow-sm" style="background: transparent;">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="#" style="font-size: 1.5rem; color: white;">
@@ -193,7 +194,7 @@ mysqli_close($conexao);
     <div class="menu-container-registra" ">
             <div class=" menu">
         <a href="registraEncomenda.php">Registrar</a>
-        <a href="chatbot.php"><i class="fa fa-whatsapp" style="font-size:36px"></i>
+        <a href="chatbotEnc.php"><i class="fa fa-whatsapp" style="font-size:36px"></i>
 </a>
     </div>
     </div>

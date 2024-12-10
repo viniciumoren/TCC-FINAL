@@ -151,7 +151,7 @@ if ($result && mysqli_num_rows($result) > 0) {
    
 </head>
 <body>
-<a href="listaEncomenda.php" class="btn-voltar">Voltar</a>
+<a href="listaEntrada.php" class="btn-voltar">Voltar</a>
 
 <div class="container">
     <h1 id="titulo">Controle de Acesso</h1> <!-- Adicionando ID para o título -->

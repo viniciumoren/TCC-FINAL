@@ -99,9 +99,41 @@
         #video-libras {
             width: 300px;
         }
+        .btn-voltar {
+            position: absolute;
+            top: 1%;
+            left: 1%;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: dodgerblue;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid dodgerblue;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 20px;
+            /* Espaçamento inferior */
+        }
+
+        .btn-voltar:hover {
+            background-color: white;
+            color: dodgerblue;
+            transform: scale(1.05);
+            /* Efeito de zoom ao passar o mouse */
+        }
+
+        .btn-voltar:active {
+            background-color: #1E90FF;
+            /* Cor mais escura ao clicar */
+            transform: scale(1);
+            /* Retira o efeito de zoom */
+        }
     </style>
 </head>
 <body>
+<a href="listaEncomenda.php" class="btn-voltar">Voltar</a>
 <div class="container">
     <h1 id="titulo">Controle de Acesso</h1> <!-- ID adicionado -->
 

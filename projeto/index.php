@@ -42,7 +42,7 @@
 
     <div class="box">
         <a href="tela-de-login.php">Login</a>
-        <a href="formulario.php">Cadastre-se</a>
+        <!-- <a href="formulario.php">Cadastre-se</a> -->
     </div>
 </body>
 </html>

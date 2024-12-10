@@ -289,6 +289,7 @@ mysqli_close($conexao);
     }
 
     // Associando os eventos de mouseover e mouseout para os botões e colunas
+    document.querySelector("a[href='chatbot.php.php']").addEventListener('mouseover', () => showVideo('video/registrar.mp4'));
     document.querySelector("a[href='registraEncomenda.php']").addEventListener('mouseover', () => showVideo('video/registrar.mp4'));
     document.querySelector("a[href='listaEncomenda.php']").addEventListener('mouseover', () => showVideo('video/encomendas.mp4'));
     document.querySelector("a[href='listaEntrada.php']").addEventListener('mouseover', () => showVideo('video/entrada.mp4'));
